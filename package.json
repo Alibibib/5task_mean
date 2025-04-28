@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Angular + Express проект",
   "scripts": {
-    "build": "cd front/angular-app && npm install && npm run build --configuration production",
+    "build": "cd front/angular-app && npm install && npm run build -- --configuration production",    
     "start": "cd server && npm install && node server.js"
   },
   "dependencies": {
