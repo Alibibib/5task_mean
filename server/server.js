@@ -43,10 +43,8 @@ app.post('/login', async (req, res) => {
 
 const path = require('path');
 
-// Статические файлы Angular
 app.use(express.static(path.join(__dirname, '../front/angular-app/dist/angular-app')));
 
-// Все запросы на frontend должны возвращать index.html
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../front/angular-app/dist/angular-app/index.html'));
 });
