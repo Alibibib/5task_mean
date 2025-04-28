@@ -1,0 +1,22 @@
+<h2>Список пользователей</h2>
+
+<div *ngIf="userRole === 'admin'">
+  <input type="text" [(ngModel)]="currentName" placeholder="Имя пользователя">
+  <button (click)="saveUser()">
+    {{ editMode ? 'Сохранить' : 'Добавить' }}
+  </button>
+</div>
+
+<ul>
+  <li *ngFor="let user of users">
+    {{ user.name }}
+
+    <span *ngIf="userRole === 'admin'">
+      <button (click)="startEdit(user)">✏️</button>
+      <button (click)="deleteUser(user)">🗑️</button>
+    </span>
+  </li>
+</ul>
+
+<br>
+<button (click)="logout()">Выйти</button>
