@@ -1,4 +1,11 @@
 {
+  "name": "mean-6-task",
+  "version": "1.0.0",
+  "description": "Angular + Express проект",
+  "scripts": {
+    "build": "cd front/angular-app && npm install && npm run build --configuration production",
+    "start": "cd server && npm install && node server.js"
+  },
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
